@@ -1,0 +1,60 @@
+AllCops:
+  TargetRubyVersion: 2.5
+  Exclude:
+    - vendor/**/*
+    - db/migrate/*
+    - bin/bundle
+Metrics/LineLength:
+  Max: 130
+Metrics/AbcSize:
+  Max: 25
+Metrics/MethodLength:
+  Max: 16
+
+# Disable this cop so we can get better code coverage.
+Style/IfUnlessModifier:
+  Enabled: false
+# Force public/protected/private keyword to be indented at the same level as the def keyword.
+Layout/AccessModifierIndentation:
+  EnforcedStyle: outdent
+# Dont require parentheses at the def block
+Style/MethodDefParentheses:
+  EnforcedStyle: require_no_parentheses
+# Ignore the schema
+Layout/EmptyLinesAroundBlockBody:
+  Exclude:
+    - 'db/schema.rb'
+Style/NumericLiterals:
+  Exclude:
+    - 'db/schema.rb'
+Layout/SpaceBeforeFirstArg:
+  Exclude:
+    - 'db/schema.rb'
+Layout/SpaceAroundOperators:
+  Exclude:
+    - 'db/schema.rb'
+Layout/SpaceInsideHashLiteralBraces:
+  Exclude:
+    - 'db/schema.rb'
+Style/StringLiterals:
+  Exclude:
+    - 'db/schema.rb'
+Style/WordArray:
+  Exclude:
+    - 'db/schema.rb'
+Metrics/BlockLength:
+  Max: 40
+  Exclude:
+    - 'db/schema.rb'
+Naming/AccessorMethodName:
+  Enabled: false
+Style/ClassAndModuleChildren:
+    Enabled: false
+Documentation:
+    Enabled: false
+Style/MixinUsage:
+    Enabled: false
+Style/GuardClause:
+    Enabled: false
+Lint/UselessAssignment:
+    Enabled: false
