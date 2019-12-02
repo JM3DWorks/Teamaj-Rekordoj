@@ -4,6 +4,8 @@ AllCops:
     - vendor/**/*
     - db/migrate/*
     - bin/bundle
+    - node_modules/**/*
+    - bin/webpack*
 Metrics/LineLength:
   Max: 130
 Metrics/AbcSize:
