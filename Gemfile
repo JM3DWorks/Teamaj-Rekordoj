@@ -11,6 +11,7 @@ gem 'bootstrap'
 gem 'coffee-rails'
 gem 'jbuilder'
 gem 'mini_racer'
+gem 'pg'
 gem 'puma'
 gem 'rails'
 gem 'sass-rails'
@@ -22,7 +23,6 @@ group :development, :test do
   gem 'brakeman'
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'rubocop'
-  gem 'sqlite3'
 end
 
 group :development do
@@ -48,7 +48,6 @@ end
 group :production do
   gem 'aws-sdk-s3', require: false
   gem 'mime-types'
-  gem 'pg'
 end
 
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
