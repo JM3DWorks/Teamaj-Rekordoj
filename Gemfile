@@ -22,6 +22,7 @@ gem 'webpacker'
 group :development, :test do
   gem 'brakeman'
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  gem 'rspec-rails'
   gem 'rubocop'
 end
 
@@ -36,10 +37,6 @@ end
 group :test do
   gem 'capybara'
   gem 'codecov'
-  gem 'guard'
-  gem 'guard-minitest'
-  gem 'minitest-reporters'
-  gem 'rails-controller-testing'
   gem 'selenium-webdriver'
   gem 'simplecov'
   gem 'webdrivers'
