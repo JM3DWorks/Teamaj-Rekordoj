@@ -9,8 +9,8 @@ development:
   <<: *default
   database: <%= Rails.root.basename.to_s + '_development' %>
   host: <%= ENV['POSTGRES_HOST'] || 'localhost' %>
-  user: <%= ENV['POSTGRES_USER'] %>
-  password: <%= ENV['POSTGRES_PASSWORD'] %>
+  user: <%= ENV['POSTGRES_USER'] || 'postgres' %>
+  password: <%= ENV['POSTGRES_PASSWORD'] || 'postgres' %>
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -20,7 +20,7 @@ test:
   database: <%= Rails.root.basename.to_s + '_test' %>
   host: <%= ENV['POSTGRES_HOST'] || 'localhost' %>
   user: <%= ENV['POSTGRES_USER'] || 'postgres' %>
-  password: <%= ENV['POSTGRES_PASSWORD'] %>
+  password: <%= ENV['POSTGRES_PASSWORD'] || 'postgres' %>
 
 production:
   <<: *default
