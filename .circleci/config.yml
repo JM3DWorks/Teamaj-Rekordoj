@@ -44,7 +44,7 @@ jobs:
       # run tests!
       - run:
           name: run tests
-          command: bundle exec rake test
+          command: bundle exec rspec
       - store_artifacts:
           path: coverage/
           destination: coverage
