@@ -10,6 +10,7 @@ gem 'bcrypt'
 gem 'bootsnap', require: false
 gem 'bootstrap'
 gem 'coffee-rails'
+gem 'devise'
 gem 'jbuilder'
 gem 'mini_racer'
 gem 'pg'
