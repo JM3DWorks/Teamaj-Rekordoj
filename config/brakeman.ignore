@@ -1,0 +1,46 @@
+{
+  "ignored_warnings": [
+    {
+      "warning_type": "Dynamic Render Path",
+      "warning_code": 15,
+      "fingerprint": "60167b6769dc8ab4beebd6755e717bf21dc199a40d71b573258995e2cf03e169",
+      "check_name": "Render",
+      "message": "Render path contains parameter value",
+      "file": "app/controllers/static_pages_controller.rb",
+      "line": 6,
+      "link": "https://brakemanscanner.org/docs/warning_types/dynamic_render_path/",
+      "code": "render(template => \"static_pages/#{params[:page]}\", {})",
+      "render_path": null,
+      "location": {
+        "type": "method",
+        "class": "StaticPagesController",
+        "method": "show"
+      },
+      "user_input": "params[:page]",
+      "confidence": "Medium",
+      "note": "if else and private valid_page method prevent arbitrary file access"
+    },
+    {
+      "warning_type": "File Access",
+      "warning_code": 16,
+      "fingerprint": "9a15e42557d7a685c6c3ebc65d3c3bbd2ed190f135b7d5f01e20a976bd148af1",
+      "check_name": "FileAccess",
+      "message": "Parameter value used in file name",
+      "file": "app/controllers/static_pages_controller.rb",
+      "line": 15,
+      "link": "https://brakemanscanner.org/docs/warning_types/file_access/",
+      "code": "Pathname.new((Rails.root + \"app/views/static_pages/#{params[:page]}.html.erb\"))",
+      "render_path": null,
+      "location": {
+        "type": "method",
+        "class": "StaticPagesController",
+        "method": "valid_page?"
+      },
+      "user_input": "params[:page]",
+      "confidence": "High",
+      "note": "if else and private valid_page method prevent arbitrary file access"
+    }
+  ],
+  "updated": "2020-01-17 08:32:44 +0000",
+  "brakeman_version": "4.7.2"
+}
