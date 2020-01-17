@@ -8,6 +8,8 @@ AllCops:
     - bin/webpack*
 Layout/LineLength:
   Max: 130
+  Exclude:
+    - config/initializers/devise.rb
 Metrics/AbcSize:
   Max: 25
 Metrics/MethodLength:

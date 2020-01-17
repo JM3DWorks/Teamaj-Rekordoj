@@ -20,6 +20,6 @@ module TeamajRekordoj
     # the framework and any gems in your application.
 
     # Use the subdomain elevator.
-	config.middleware.use Apartment::Elevators::Subdomain
+    config.middleware.use Apartment::Elevators::Subdomain
   end
 end
