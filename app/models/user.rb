@@ -6,4 +6,12 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable,
          :confirmable, :lockable, :trackable
+
+  after_create :create_tenant
+
+  private
+
+    def create_tenant
+      Apartment::Tenant.create(subdomain)
+    end
 end
